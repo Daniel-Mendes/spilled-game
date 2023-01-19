@@ -10,8 +10,14 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy(".src/static/img");
+  eleventyConfig.addPassthroughCopy(".src/static/css");
+
+  // Copy Netlify CMS `config.yml` fil to the output
+  eleventyConfig.addPassthroughCopy("./src/admin/config.yml");
+
+  // Copy favicon to route of /_site
+  // eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
@@ -75,24 +81,6 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  // Override Browsersync defaults (used only with --serve)
-  eleventyConfig.setBrowserSyncConfig({
-    callbacks: {
-      ready: function(err, browserSync) {
-        const content_404 = fs.readFileSync('dist/404.html');
-
-        browserSync.addMiddleware("*", (req, res) => {
-          // Provides the 404 content without redirect.
-          res.writeHead(404, {"Content-Type": "text/html; charset=UTF-8"});
-          res.write(content_404);
-          res.end();
-        });
-      },
-    },
-    ui: false,
-    ghostMode: false
-  });
-
   return {
     // Control which files Eleventy will process
     templateFormats: [
@@ -114,10 +102,10 @@ module.exports = function(eleventyConfig) {
 
     // These are all optional (defaults are shown):
     dir: {
-      input: ".",
-      includes: "includes",
-      data: "data",
-      output: "dist"
+      input: "src",
+      includes: "_includes",
+      data: "_data",
+      output: "_site"
     }
   };
 };

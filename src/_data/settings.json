@@ -1,0 +1,21 @@
+{
+  "title": "Spilled! Game",
+  "url": "https://spilledgame.com/",
+  "language": "en",
+  "description": "Your task is to clean the waters from a nasty oil leak. Drive to a nearby recycle facility to deliver your collected oil. You'll be awarded coins for your good deed. Upgrade your boat! Venture out to clean bigger and stronger oil spills!",
+  "feed": {
+    "subtitle": "Your task is to clean the waters from a nasty oil leak. Drive to a nearby recycle facility to deliver your collected oil. You'll be awarded coins for your good deed. Upgrade your boat! Venture out to clean bigger and stronger oil spills!",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https:/spilledgame.com"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://spilledgame.com"
+  },
+  "author": {
+    "name": "Lente",
+    "email": "hello@lente.me",
+    "url": "https://lente.me"
+  }
+}

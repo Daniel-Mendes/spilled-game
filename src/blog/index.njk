@@ -1,0 +1,15 @@
+---
+layout: layouts/blog.njk
+eleventyNavigation:
+  key: Blog
+  order: 2
+---
+
+<section class="mt-15">
+    {% set maxPosts = collections.posts.length | min(3) %}
+    <h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+
+    {% set postslist = collections.posts | head(-3) %}
+    {% set postslistCounter = collections.posts | length %}
+    {% include "postslist.njk" %}
+</section>
