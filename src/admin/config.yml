@@ -35,6 +35,39 @@ collections:
     editor:
       preview: false
     files:
+      - label: Game
+        name: game
+        file: "src/_data/game.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: text }
+          - { label: Image, name: image, widget: image }
+          - label: Features
+            name: features
+            widget: list
+            collapsed: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Image, name: image, widget: image }
+          - label: Gallery
+            name: gallery
+            widget: list
+            collapsed: true
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Caption, name: caption, widget: string }
+      - label: "Social links"
+        name: "links"
+        file: "src/_data/networks.json"
+        fields:
+          - label: Nav Items
+            name: links
+            widget: list
+            collapsed: false
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: URL, name: url, widget: string }
       - label: "Navigation"
         name: "items"
         file: "src/_data/navigation.json"
@@ -46,17 +79,6 @@ collections:
             collapsed: false
             fields:
               - { label: Title, name: text, widget: string }
-              - { label: URL, name: url, widget: string }
-      - label: "Social links"
-        name: "links"
-        file: "src/_data/social-networks.json"
-        fields:
-          - label: Nav Items
-            name: links
-            widget: list
-            collapsed: false
-            fields:
-              - { label: Name, name: name, widget: string }
               - { label: URL, name: url, widget: string }
       - label: "Meta Settings"
         name: "settings"

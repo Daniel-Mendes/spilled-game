@@ -1,24 +1,32 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This is my first post.</title>
     <meta name="description" content="This is a post on My Blog about agile frameworks.">
-    <meta name="author" content="">
+    <meta name="author" content="Lente">
 
     <meta name="generator" content="Eleventy v1.0.2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/prism-base16-monokai.dark.css">
+    <link rel="stylesheet" href="/static/css/prism-diff.css">
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="alternate" href="." type="application/atom+xml" title="">
-    <link rel="alternate" href="." type="application/json" title="">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Spilled! Game">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Spilled! Game">
   </head>
   <body>
     <header>
-      <h1 class="home"><a href="/"></a></h1>
+      <h1 class="home"><a href="/">Spilled! Game</a></h1>
       <ul class="nav">
-        <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item"><a href="/blog/">Blog</a></li>
+        <li class="nav-item"><a href="/#">Home</a></li>
+        <li class="nav-item"><a href="/#features">Features</a></li>
+        <li class="nav-item"><a href="/#gallery">Gallery</a></li>
+        <li class="nav-item"><a href="/blog">Blog</a></li>
       </ul>
     </header>
 
@@ -35,9 +43,23 @@
 <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 <pre class="language-diff-js"><code class="language-diff-js">// this is a command<br>function myCommand() {<br><span class="token inserted-sign inserted language-js"><span class="token prefix inserted">+</span>	<span class="token keyword">let</span> counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br><span class="token prefix inserted">+</span>	counter<span class="token operator">++</span><span class="token punctuation">;</span><br></span>}<br><br>// Test with a line break above this line.<br>console.log('Test');</code></pre>
 
-      
+
+      <div id="subscribe">
+        <h3>Subscribe</h3>
+        <p>Subscribe to my newsletter to get updates about the game progress.</p>
+
+        <form action="" method="POST" class="subscribe-form">
+            <input type="email" name="email" placeholder="Your email address">
+            <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
     </main>
 
-    <footer></footer>
+    <footer>
+      <ul class="social">
+      
+      </ul>
+    </footer>
   </body>
 </html>

@@ -1,19 +1,19 @@
 {
   "items": [
     {
-      "text": "Menu One",
-      "url": "#"
+      "title": "Home",
+      "url": "/#"
     },
     {
-      "text": "Menu Two",
-      "url": "#"
+      "title": "Features",
+      "url": "/#features"
     },
     {
-      "text": "Menu Three",
-      "url": "#"
+      "title": "Gallery",
+      "url": "/#gallery"
     },
     {
-      "text": "Blog",
+      "title": "Blog",
       "url": "/blog"
     }
   ]

@@ -5,4 +5,43 @@ eleventyNavigation:
   order: 1
 ---
 
-<h1></h1>
+<div id="hero">
+  <div class="hero-image"></div>
+  <div class="hero-content">
+    <h1>{{ game.title }}</h1>
+    <p>{{ game.description }}.</p>
+  </div>
+</div>
+
+<div id="features">
+  <h2>Features</h2>
+
+  <div class="feature-grid">
+    {% for feature in game.features %}
+      <div class="feature">
+        <div class="feature-image">
+          <img src="{{ feature.image }}" alt="{{ feature.title }}">
+        </div>
+        <div class="feature-content">
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="gallery">
+  <h2>Screenshots</h2>
+
+  <div class="gallery-grid">
+    {% for image in game.gallery %}
+      <div class="gallery-item">
+        <figure>
+          <img src="{{ image.image }}" alt="{{ image.caption }}">
+          <figcaption>{{ image.caption }}</figcaption>
+        </figure>
+      </div>
+    {% endfor %}
+  </div>
+</div>

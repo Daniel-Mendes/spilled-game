@@ -10,8 +10,8 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy(".src/static/img");
-  eleventyConfig.addPassthroughCopy(".src/static/css");
+  eleventyConfig.addPassthroughCopy("./src/static/img");
+  eleventyConfig.addPassthroughCopy("./src/static/css");
 
   // Copy Netlify CMS `config.yml` fil to the output
   eleventyConfig.addPassthroughCopy("./src/admin/config.yml");

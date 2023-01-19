@@ -1,25 +1,33 @@
 <!doctype html>
-<html lang="{{ metadata.language }}">
+<html lang="{{ settings.language }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or metadata.title }}</title>
-    <meta name="description" content="{{ description or metadata.description }}">
-    <meta name="author" content="{{ metadata.author.name }}">
+    <title>{{ title or settings.title }}</title>
+    <meta name="description" content="{{ description or settings.description }}">
+    <meta name="author" content="{{ settings.author.name }}">
 
     <meta name="generator" content="{{ eleventy.generator }}">
 
-    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
-    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    {#- Poppins Font #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ '/static/css/style.css' | url }}">
+    <link rel="stylesheet" href="{{ '/static/css/prism-base16-monokai.dark.css' | url }}">
+    <link rel="stylesheet" href="{{ '/static/css/prism-diff.css' | url }}">
+
+    <link rel="alternate" href="{{ settings.feed.path | url }}" type="application/atom+xml" title="{{ settings.title }}">
+    <link rel="alternate" href="{{ settings.jsonfeed.path | url }}" type="application/json" title="{{ settings.title }}">
   </head>
   <body>
     <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+      <h1 class="home"><a href="{{ '/' | url }}">{{ settings.title }}</a></h1>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="nav">
-      {%- for entry in collections.all | eleventyNavigation %}
+      {%- for entry in navigation.items %}
         <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
       {%- endfor %}
       </ul>
@@ -28,9 +36,27 @@
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
 
       {{ content | safe }}
-      
+
+      <div id="subscribe">
+        <h3>Subscribe</h3>
+        <p>Subscribe to my newsletter to get updates about the game progress.</p>
+
+        <form action="" method="POST" class="subscribe-form">
+            <input type="email" name="email" placeholder="Your email address">
+            <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
     </main>
 
-    <footer></footer>
+    <footer>
+      <ul class="social">
+      {% for social in networks.links" %}
+        <li class="social-item">
+          <a href="{{ social.url }}" target="_blank" rel="noopener">{{ social.name }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </footer>
   </body>
 </html>
