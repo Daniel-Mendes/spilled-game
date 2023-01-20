@@ -38,6 +38,7 @@
       {{ content | safe }}
 
       <div id="subscribe">
+        <div class="subscribe-blob"></div>
         <h3>Subscribe</h3>
         <p>Subscribe to my newsletter to get updates about the game progress.</p>
 
@@ -51,12 +52,18 @@
 
     <footer>
       <ul class="social">
-      {% for social in networks.links" %}
+      {%- for social in networks.links %}
         <li class="social-item">
-          <a href="{{ social.url }}" target="_blank" rel="noopener">{{ social.name }}</a>
+          
+          <a href="{{ social.url }}" target="_blank" rel="noopener">
+            <i class="icon {{ social.icon }}"></i>
+            {{ social.name }}
+          </a>
         </li>
-      {% endfor %}
+      {%- endfor %}
       </ul>
     </footer>
+
+    <script src="{{ '/static/js/app.js' | url }}"></script>
   </body>
 </html>

@@ -16,6 +16,8 @@
 
   --text-color: var(--color-gray-50);
   --text-color-link: #fff;
+
+  --filter-white: invert(95%) sepia(0%) saturate(7483%) hue-rotate(86deg) brightness(109%) contrast(104%);
 }
 
 
@@ -93,6 +95,19 @@ header {
 
   z-index: 1;
 }
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+
+  background-color: var(--background-color);
+
+  z-index: 10;
+}
+
 .home {
   padding: 0 1rem;
   float: left;
@@ -223,14 +238,12 @@ a[href].direct-link:focus:visited,
 
 .hero-image::after {
   content: "";
-  width: 80%;
-  height: 80%;
+  width: 140%;
+  height: 140%;
 
   position: absolute;
-  top: 50%;
-  left: 55%;
-  
-  transform: translate(-50%, -50%) rotateX(180deg);
+  top: 20%;
+  left: -10%;
 
   background-image: url("./svg/hero-blob.svg");
   background-size: contain;
@@ -262,7 +275,7 @@ a[href].direct-link:focus:visited,
 }
 
 .hero-content > h1 {
-  font-size: 8rem;
+  font-size: 5rem;
   font-weight: bold;
 
   margin-top: 0;
@@ -277,6 +290,23 @@ a[href].direct-link:focus:visited,
   text-align: left;
 }
 
+.hero-content > a {
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: .5rem;
+
+  background-image: radial-gradient(circle at top left, #85a805 10%, #6a8704 80%);
+
+  margin-top: 2rem;
+}
+
+.hero-content > a:hover {
+  color: #fff;
+
+  background-image: radial-gradient(circle at top left, #a3cf06 0%, #6a8704 120%);
+} 
+
+
 h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -289,14 +319,16 @@ h2 {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5rem;
 
-  margin: auto 5rem;
+  margin: 0 1rem;
 }
 
 .feature-image > img {
-  max-width: 480px;
+  width: 100%;
+
+  object-fit: contain;
 }
 
 .feature-content > h3 {
@@ -306,17 +338,20 @@ h2 {
 }
 
 #features,
-#gallery {
+#gallery,
+#subscribe {
   margin: 15rem auto;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 4rem 1rem;
+
+  margin: 0 1rem;
 }
 
 .gallery-item {
-  height: 50vh;
   width: 100%;
 }
 
@@ -331,31 +366,61 @@ h2 {
   color: var(--color-gray-50);
 }
 
+.gallery-item > figure {
+  margin: 0;
+}
+
 #subscribe {
-  width: 50%;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#subscribe > *:not(.subscribe-blob) {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  width: 100%;
+}
+
+.subscribe-blob {
+  content: "";
+  width: 100%;
+  height: 60%;
+
+  position: absolute;
+  top: 20%;
+  left: -10%;
+
+  background-image: url("./svg/subscribe-blob.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  z-index: -1;
 }
 
 #subscribe > h3 {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-gray-20);
+  color: var(--color-gray-90);
   margin-bottom: 2rem;
 }
 
 #subscribe > p {
   margin-bottom: 4rem;
+  color: var(--color-gray-50);
 }
 
-.subscribe-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.subscribe-form > input {
-  width: 50%;
+.subscribe-form > input,
+.subscribe-form > button {
+  width: 100%;
   height: 3rem;
   margin: 1rem 0;
   padding: 0 1rem;
@@ -364,12 +429,6 @@ h2 {
 }
 
 .subscribe-form > button {
-  width: 50%;
-  height: 3rem;
-  margin: 1rem 0;
-  padding: 0 1rem;
-  border: 1px solid var(--color-gray-50);
-  border-radius: 0.25rem;
   background-color: var(--color-gray-50);
   color: var(--color-gray-90);
   cursor: pointer;
@@ -380,6 +439,107 @@ h2 {
   color: var(--color-gray-50);
 }
 
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 0 1rem;
+}
+
+.social > li {
+  list-style: none;
+}
+
+.social > li > a {
+  text-decoration: none;
+
+  color: var(--color-gray-50);
+}
+
+.social > li > a:hover {
+  color: #FFF;
+}
+
+.social .icon {
+  display: inline-block;
+
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+
+  filter: var(--filter-white);
+  background-repeat: no-repeat;
+
+  margin-right: .1rem;
+}
+
+.icon.youtube {
+  background-image: url("./svg/youtube.svg");
+}
+
+.icon.twitter {
+  background-image: url("./svg/twitter.svg");
+}
+
+.icon.instagram {
+  background-image: url("./svg/instagram.svg");
+}
+
+.icon.tiktok {
+  background-image: url("./svg/tiktok.svg");
+}
+
+.icon.discord {
+  background-image: url("./svg/discord.svg");
+}
+
 footer {
   margin: 5rem auto;
+}
+
+@media screen and (min-width: 992px) {
+  .hero-content > h1 {
+    font-size: 8rem;
+  }
+
+  .hero-image::after {
+    width: 80%;
+    height: 80%;
+  
+    top: 50%;
+    left: 68%;
+    
+    transform: translate(-50%, -50%) rotateX(180deg);
+  }
+
+  .feature-grid {
+    margin: auto 5rem;
+  }
+
+  #subscribe {
+    width: 50%;
+    height: 80vh;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subscribe-blob {
+    width: 100%;
+    height: 100%;
+  
+    top: 0;
+    left: 0;
+  }
+
+  .subscribe-form > input,
+  .subscribe-form > button {
+    width: 50%;
+  }
+
+  .social {
+    gap: 3rem;
+  }
 }

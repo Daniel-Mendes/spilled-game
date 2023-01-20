@@ -1,35 +1,35 @@
 {
     "title": "Spilled!",
-    "description": "Collect all the oil\nand upgrade your boat to explore new seas.",
-    "image": "/static/img/spilled-hero.jpg",
+    "description": "Collect all the oil and upgrade\nyour boat to explore new seas.",
+    "image": "/static/img/spilled-hero.jpeg",
     "features": [
         {
             "title": "A cup of coffee",
             "description": "A cup of coffee that has been spilled on the floor.",
-            "image": "/static/img/spilled-hero.jpg"
+            "image": "/static/img/spilled-hero.jpeg"
         },
         {
             "title": "Upgrade your boat",
             "description": "Upgrade your boat to collect more oil, and go faster.",
-            "image": "/static/img/spilled-feature-upgrad.jpeg"
+            "image": "/static/img/spilled-feature-upgrade.jpeg"
         },
         {
             "title": "Explore new seas",
             "description": "You can explore new seas and collect new types of oil.",
-            "image": "/static/img/spilled-hero.jpg"
+            "image": "/static/img/spilled-hero.jpeg"
         }
     ],
     "gallery": [
         {
-            "image": "/static/img/spilled-hero.jpg",
+            "image": "/static/img/spilled-hero.jpeg",
             "caption": "First screenshot caption"
         },
         {
-            "image": "/static/img/spilled-hero.jpg",
+            "image": "/static/img/spilled-hero.jpeg",
             "caption": "Second screenshot caption"
         },
         {
-            "image": "/static/img/spilled-hero.jpg",
+            "image": "/static/img/spilled-hero.jpeg",
             "caption": "Third screenshot caption"
         }
     ]

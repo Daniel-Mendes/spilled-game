@@ -2,23 +2,28 @@
   "links": [
     {
       "name": "Youtube",
-      "url": "https://www.youtube.com/@LenteGameDev"
+      "url": "https://www.youtube.com/@LenteGameDev",
+      "icon": "youtube"
     },
     {
       "name": "Twitter",
-      "url": "https://twitter.com/LenteGameDev"
+      "url": "https://twitter.com/LenteGameDev",
+      "icon": "twitter"
     },
     {
       "name": "Instagram",
-      "url": "https://www.instagram.com/LenteGameDev/"
+      "url": "https://www.instagram.com/LenteGameDev/",
+      "icon": "instagram"
     },
     {
       "name": "TikTok",
-      "url": "https://www.tiktok.com/@lentegamedev"
+      "url": "https://www.tiktok.com/@lentegamedev",
+      "icon": "tiktok"
     },
     {
       "name": "Discord",
-      "url": "https://discord.com/invite/qya9Eb9Z9t"
+      "url": "https://discord.com/invite/qya9Eb9Z9t",
+      "icon": "discord"
     }
   ]
 }
