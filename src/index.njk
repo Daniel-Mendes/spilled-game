@@ -6,10 +6,13 @@ eleventyNavigation:
 ---
 
 <div id="hero">
-  <div class="hero-image"></div>
+  <div class="hero-image">
+    <img src="{{ game.image }}" alt="{{ game.title }}">
+  </div>
   <div class="hero-content">
     <h1>{{ game.title }}</h1>
     <p>{{ game.description }}.</p>
+    <a href="https://store.steampowered.com/app/2240080/Spilled/" target="_blank" rel="noopener">Wishlist game on Steam</a>
   </div>
 </div>
 

@@ -215,13 +215,33 @@ a[href].direct-link:focus:visited,
 /* Index */
 .hero-image {
   width: 100%;
-  height: 105vh;
-
-  background-image: url("../img/spilled-hero.jpg");
-  background-size: cover;
+  height: 102vh;
 
   -webkit-mask-image: linear-gradient(0deg,transparent,transparent 10%,#282d2a 20%);
   mask-image: linear-gradient(0deg,transparent,transparent 10%,#282d2a 20%);
+}
+
+.hero-image::after {
+  content: "";
+  width: 80%;
+  height: 80%;
+
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  
+  transform: translate(-50%, -50%) rotateX(180deg);
+
+  background-image: url("./svg/hero-blob.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero-image > img {
+  object-fit: cover;
+
+  width: 100%;
+  height: 100vh;
 }
 
 .hero-content {
@@ -250,7 +270,11 @@ a[href].direct-link:focus:visited,
 }
 
 .hero-content > p {
-  font-size: 2rem;
+  font-weight: 200;
+  font-size: 1.5rem;
+
+  white-space: pre-line;
+  text-align: left;
 }
 
 h2 {
