@@ -261,8 +261,8 @@ a[href].direct-link:focus:visited,
 }
 
 .hero-image {
-  width: 100%;
-  height: 102vh;
+  width: auto;
+  height: 105vh;
 
   -webkit-mask-image: linear-gradient(0deg,transparent,transparent 10%,#282d2a 20%);
   mask-image: linear-gradient(0deg,transparent,transparent 10%,#282d2a 20%);
@@ -274,7 +274,7 @@ a[href].direct-link:focus:visited,
   object-fit: cover;
 
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .hero-blob {
