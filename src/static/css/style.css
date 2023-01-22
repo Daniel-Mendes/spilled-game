@@ -147,7 +147,7 @@ header.sticky {
 }
 .nav-item {
   display: inline-block;
-  margin-right: 2em;
+  margin-right: 1rem;
 }
 .nav-item-active {
   font-weight: 700;
@@ -601,6 +601,10 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
+  .nav-item {
+    margin-right: 2rem;
+  }
+
   .hero-content > h1 {
     font-size: 8rem;
   }
