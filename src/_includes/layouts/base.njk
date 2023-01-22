@@ -51,7 +51,8 @@
         <h3 class="hidden">Subscribe</h3>
         <p class="hidden">Subscribe to my newsletter to get updates about the game progress.</p>
 
-        <form action="" method="POST" class="subscribe-form">
+        <form name="newsletter" method="POST" class="subscribe-form" data-netlify="true" netlify-honeypot="bot-field">
+            <label class="bot-field">Don’t fill this out if you’re human: <input name="bot-field" /></label>
             <input type="email" name="email" placeholder="Your email address" class="hidden">
             <button type="submit" class="hidden">Subscribe</button>
         </form>
