@@ -9,6 +9,36 @@
         <!-- Include the script that builds the page and powers Netlify CMS -->
         <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 
+        <!-- eleventy-plugin-youtube-embed -->
+        <script>
+            window.CMS.registerEditorComponent({
+                // Internal id of the component
+                id: "youtube",
+                // Visible label
+                label: "Youtube Video URL",
+                // Fields the user need to fill out when adding an instance of the component
+                fields: [{ name: "id", label: "Youtube Video ID", widget: "string" }],
+                // Pattern to identify a block as being an instance of this component
+                pattern: /(?:https?:\/\/)??(?:w{3}\.)??(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/)??([A-Za-z0-9-_]{11})(?:[^\s<>]*)(?=(\s*))/,
+                // Function to extract data elements from the regexp match
+                fromBlock: function(match) {
+                    return {
+                        id: match[1]
+                    };
+                },
+                // Function to create a text block from an instance of this component
+                toBlock: function(obj) {
+                    return `http://www.youtube.com/watch?v=${obj.id}`;
+                },
+                // Preview output for this component. Can either be a string or a React component
+                // (component gives better render performance)
+                toPreview: function(obj) {
+                    return `<img src="http://img.youtube.com/vi/${obj.id}/maxresdefault.jpg" alt="Youtube Video" width="100%" />`;
+                }
+            })
+
+        </script>
+          
         <!-- Netlify Identity Widget -->
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </body>

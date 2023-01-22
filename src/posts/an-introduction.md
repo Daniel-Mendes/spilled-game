@@ -13,10 +13,7 @@ I'm Lente, that means 'Spring' in Dutch :) I'm 22 years old and live in The Neth
 
 I grew up here, on a ship that my parents bought in 1995. 
 
-![My parents boat](/../static/img/post-an-introduction-boat-1.jpeg)
-
-*This spot is what we called the 'Zomerplek' or 'Summer spot'.
-This is because for winter, we would move to the harbor in town centre.*
+![This spot is what we called the 'Zomerplek' or 'Summer spot'. This is because for winter, we would move to the harbor in town centre.](/../static/img/post-an-introduction-boat-1.jpeg)
 
 It was in the middle of nature. For electricity, we had a generator on land that we would turn on whenever we needed it.
 
@@ -43,7 +40,7 @@ Although I do still miss that old spot in nature to this day.
 
 The municipality had to give us a new spot somewhere else, and things have been better since :)
 
-------------------------------------------------------------------------------------------------------------
+- - -
 
 It was here where I started getting into Game Development.
 
@@ -64,9 +61,9 @@ I seemed to have a thing for clicker games at this time.
 
 I actually released this game on the Play Store, and managed to get around $60 in ad revenue! that was really cool :)
 
-![First game in Unity](/../static/img/post-introduction-first-game-android.png)
+![First game published to the Play Store](/../static/img/post-introduction-first-game-android.png)
 
- **Bert 2!** a sequel to the first Bert game. We started working on this when we were in the same rental house, a year later! (we liked to go the same places every year)
+**Bert 2!** a sequel to the first Bert game. We started working on this when we were in the same rental house, a year later! (we liked to go the same places every year)
 
 It's pretty much a Call of Duty: Zombies clone, with Bert as the main character and evil honey pots invading the house (he is having a nightmare lol)
 
@@ -74,7 +71,7 @@ My brother remade the whole rental house in Blender! It was so much fun to work 
 
 We kept working on the game even after the vacation, and eventually released it!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YessuSXLXhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=YessuSXLXhs
 
 After this, I felt an itch to try working without a premade game-engine.
 I started out with Java & Processing. 
@@ -87,7 +84,7 @@ I also played around with making a 3D Game Engine from scratch.
 For this, I followed ThinMatrix's tutorials on YouTube, which were absolutely awesome.
 Once again it was really satisfying to make all of this from scratch.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ggwk0aYlxiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=ggwk0aYlxiQ
 
 Back to 2D, I made a little platformer with C# and MonoGame. 
 
@@ -111,8 +108,9 @@ I made a really cool 'optimized' collision system where snow could stack on top 
 
 ![First c++ game](/../static/img/post-introduction-first-cplusplus-2.jpeg)
 
-------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------
+- - -
+
+- - -
 
 And this was pretty recent! 
 

@@ -609,7 +609,7 @@ footer {
   }
 
   #subscribe {
-    width: 50%;
+    width: 50vw;
     height: 80vh;
 
     margin-left: auto;
@@ -701,8 +701,32 @@ footer {
   border-bottom: 1px solid var(--color-gray-90);
 }
 
+.post > figure:has(img) {
+  text-align: center;
+}
+
+.post > figure > figcaption {
+  font-style: italic;
+}
+
+.post img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+.post .eleventy-plugin-youtube-embed > lite-youtube {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 992px) {
   .post {
-    width: 40vw;
+    width: 50vw;
+  }
+
+  .post img {
+    width:  auto;
   }
 }
