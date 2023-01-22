@@ -254,7 +254,7 @@ a[href].direct-link:focus:visited,
 }
 
 /* Index */
-.hero {
+#hero {
   position: relative;
   overflow: hidden;
 }
