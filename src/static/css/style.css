@@ -253,6 +253,7 @@ a[href].direct-link:focus:visited,
 
 .hero-image > img {
   object-fit: cover;
+  object-position: center top;
 
   width: 100%;
   height: 100%;
@@ -597,6 +598,10 @@ footer {
     left: 53%;
   
     transform: translate(-50%, -50%) rotateX(180deg) scale(0.4);
+  }
+
+  .hero-image > img {
+    object-position: left top;
   }
 
   .feature-grid {

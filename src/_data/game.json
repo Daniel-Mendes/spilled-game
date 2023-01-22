@@ -1,7 +1,7 @@
 {
     "title": "Spilled!",
     "description": "Collect all the oil and upgrade\nyour boat to explore new seas.",
-    "image": "/static/img/spilled-hero.jpeg",
+    "image": "/static/img/spilled-hero-2.png",
     "features": [
         {
             "title": "A cup of coffee",
@@ -10,23 +10,23 @@
         },
         {
             "title": "Upgrade your boat",
-            "description": "Upgrade your boat to collect more oil, and go faster.",
+            "description": "Upgrade your collector size, tank site and speed.",
             "image": "/static/img/spilled-feature-upgrade.jpeg"
         },
         {
             "title": "Explore new seas",
-            "description": "You can explore new seas and collect new types of oil.",
-            "image": "/static/img/spilled-hero.jpeg"
+            "description": "Unlock new seas and collect new types of oils.",
+            "image": "/static/img/spilled-feature-new-oils-2.png"
         }
     ],
     "gallery": [
         {
-            "image": "/static/img/spilled-hero.jpeg",
-            "caption": "First screenshot caption"
+            "image": "/static/img/spilled-screenshot-1.png",
+            "caption": "Area when you first start the game."
         },
         {
-            "image": "/static/img/spilled-hero.jpeg",
-            "caption": "Second screenshot caption"
+            "image": "/static/img/spilled-screenshot-2.png",
+            "caption": "Recycle facility where you can sell your oil and upgrade your boat."
         },
         {
             "image": "/static/img/spilled-hero.jpeg",
