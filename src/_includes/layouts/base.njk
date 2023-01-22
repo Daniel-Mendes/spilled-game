@@ -22,6 +22,11 @@
 
     <link rel="alternate" href="{{ settings.feed.path | url }}" type="application/atom+xml" title="{{ settings.title }}">
     <link rel="alternate" href="{{ settings.jsonfeed.path | url }}" type="application/json" title="{{ settings.title }}">
+
+    <meta property="og:title" content="{{ settings.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ settings.url }}" />
+    <meta property="og:image" content="{{ game.image }}" />
   </head>
   <body>
     <header>
