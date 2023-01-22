@@ -1,4 +1,4 @@
-| ![Spilled hero image](https://raw.githubusercontent.com/Daniel-Mendes/spilled-game/main/src/static/img/spilled-hero.jpeg) |
+| ![Spilled hero image](https://raw.githubusercontent.com/Daniel-Mendes/spilled-game/main/src/static/img/spilled-hero.png) |
 | ------------------------------------------------------------------------------------------------------------- |
 
 # Spilled!
