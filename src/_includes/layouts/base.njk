@@ -18,12 +18,14 @@
     <link rel="stylesheet" href="{{ '/static/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="stylesheet" href="{{ '/static/css/prism-diff.css' | url }}">
 
+     <script src="{{ '/static/js/app.js' | url }}" defer></script>
+
     <link rel="alternate" href="{{ settings.feed.path | url }}" type="application/atom+xml" title="{{ settings.title }}">
     <link rel="alternate" href="{{ settings.jsonfeed.path | url }}" type="application/json" title="{{ settings.title }}">
   </head>
   <body>
     <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ settings.title }}</a></h1>
+      <h1 class="home"><a href="{{ '/' | url }}">{{ game.title }}</a></h1>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="nav">
@@ -38,13 +40,15 @@
       {{ content | safe }}
 
       <div id="subscribe">
-        <div class="subscribe-blob"></div>
-        <h3>Subscribe</h3>
-        <p>Subscribe to my newsletter to get updates about the game progress.</p>
+        <div class="subscribe-blob">
+          <img src="{{ '/static/css/svg/subscribe-blob.svg' | url }}" alt="Subscribe Blob">
+        </div>
+        <h3 class="hidden">Subscribe</h3>
+        <p class="hidden">Subscribe to my newsletter to get updates about the game progress.</p>
 
         <form action="" method="POST" class="subscribe-form">
-            <input type="email" name="email" placeholder="Your email address">
-            <button type="submit">Subscribe</button>
+            <input type="email" name="email" placeholder="Your email address" class="hidden">
+            <button type="submit" class="hidden">Subscribe</button>
         </form>
       </div>
 
@@ -53,17 +57,14 @@
     <footer>
       <ul class="social">
       {%- for social in networks.links %}
-        <li class="social-item">
-          
+        <li class="social-item hidden" style="--order: {{ loop.index }}">
           <a href="{{ social.url }}" target="_blank" rel="noopener">
             <i class="icon {{ social.icon }}"></i>
-            {{ social.name }}
+            <span>{{ social.name }}</span>
           </a>
         </li>
       {%- endfor %}
       </ul>
     </footer>
-
-    <script src="{{ '/static/js/app.js' | url }}"></script>
   </body>
 </html>

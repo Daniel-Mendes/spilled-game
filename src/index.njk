@@ -9,19 +9,22 @@ eleventyNavigation:
   <div class="hero-image">
     <img src="{{ game.image }}" alt="{{ game.title }}">
   </div>
+  <div class="hero-blob">
+    <img src="/static/css/svg/hero-blob.svg">
+  </div>
   <div class="hero-content">
-    <h1>{{ game.title }}</h1>
-    <p>{{ game.description }}.</p>
-    <a href="https://store.steampowered.com/app/2240080/Spilled/" target="_blank" rel="noopener">Wishlist game on Steam</a>
+    <h1 class="hidden">{{ game.title }}</h1>
+    <p class="hidden">{{ game.description }}.</p>
+    <a href="https://store.steampowered.com/app/2240080/Spilled/" target="_blank" rel="noopener" class="hidden">Wishlist game on Steam</a>
   </div>
 </div>
 
 <div id="features">
-  <h2>Features</h2>
+  <h2 class="hidden">Features</h2>
 
   <div class="feature-grid">
     {% for feature in game.features %}
-      <div class="feature">
+      <div class="feature-item hidden" style="--order: {{ loop.index }}">
         <div class="feature-image">
           <img src="{{ feature.image }}" alt="{{ feature.title }}">
         </div>
@@ -35,11 +38,11 @@ eleventyNavigation:
 </div>
 
 <div id="gallery">
-  <h2>Screenshots</h2>
+  <h2 class="hidden">Screenshots</h2>
 
   <div class="gallery-grid">
     {% for image in game.gallery %}
-      <div class="gallery-item">
+      <div class="gallery-item hidden" style="--order: {{ loop.index }}">
         <figure>
           <img src="{{ image.image }}" alt="{{ image.caption }}">
           <figcaption>{{ image.caption }}</figcaption>

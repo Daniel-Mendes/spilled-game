@@ -1,10 +1,6 @@
 {
   "items": [
     {
-      "title": "Home",
-      "url": "/#"
-    },
-    {
       "title": "Features",
       "url": "/#features"
     },
