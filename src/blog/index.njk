@@ -5,9 +5,9 @@ eleventyNavigation:
   order: 2
 ---
 
-<section class="mt-15">
+<section class="blog-posts">
     {% set maxPosts = collections.posts.length | min(3) %}
-    <h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+    <h2>Latest {% if maxPosts == 1 %}post{% else %}{{ maxPosts }} posts{% endif %}</h2>
 
     {% set postslist = collections.posts | head(-3) %}
     {% set postslistCounter = collections.posts | length %}

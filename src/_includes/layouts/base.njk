@@ -15,10 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="{{ '/static/css/style.css' | url }}">
-    <link rel="stylesheet" href="{{ '/static/css/prism-base16-monokai.dark.css' | url }}">
-    <link rel="stylesheet" href="{{ '/static/css/prism-diff.css' | url }}">
+    <link rel="stylesheet" href="{{ '/static/css/prism-tomorrow.css' | url }}">
 
-     <script src="{{ '/static/js/app.js' | url }}" defer></script>
+    <script src="{{ '/static/js/app.js' | url }}" defer></script>
+    <script src="{{ '/static/js/prism.js' | url }}" defer></script>
 
     <link rel="alternate" href="{{ settings.feed.path | url }}" type="application/atom+xml" title="{{ settings.title }}">
     <link rel="alternate" href="{{ settings.jsonfeed.path | url }}" type="application/json" title="{{ settings.title }}">
@@ -29,7 +29,7 @@
     <meta property="og:image" content="{{ game.image }}" />
   </head>
   <body>
-    <header>
+    <header class="{{ header }}">
       <h1 class="home"><a href="{{ '/' | url }}">{{ game.title }}</a></h1>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}

@@ -51,8 +51,7 @@ body {
 p:last-child {
   margin-bottom: 0;
 }
-p,
-.tmpl-post li {
+p {
   line-height: 1.45;
 }
 
@@ -167,73 +166,55 @@ header.sticky {
 
 /* Posts list */
 .postlist {
-  list-style: none;
-  padding: 0;
-}
-.postlist-item {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  counter-increment: start-from -1;
-  line-height: 1.8;
-}
-.postlist-item:before {
-  display: inline-block;
-  pointer-events: none;
-  content: "" counter(start-from, decimal-leading-zero) ". ";
-  line-height: 100%;
-  text-align: right;
-}
-.postlist-date,
-.postlist-item:before {
-  font-size: 0.8125em; /* 13px /16 */
-  color: var(--color-gray-90);
-}
-.postlist-date {
-  word-spacing: -0.5px;
-}
-.postlist-link {
-  padding-left: .25em;
-  padding-right: .25em;
-  text-underline-position: from-font;
-  text-underline-offset: 0;
-  text-decoration-thickness: 1px;
-}
-.postlist-item-active .postlist-link {
-  font-weight: bold;
-}
-.tmpl-home .postlist-link {
-  font-size: 1.1875em; /* 19px /16 */
-  font-weight: 700;
+  flex-direction: column;
+  gap: 2rem;
+
+  width: 100vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
 }
 
-/* Tags */
-.post-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  font-size: 0.75em; /* 12px /16 */
-  padding: 0.08333333333333em 0.3333333333333em; /* 1px 4px /12 */
-  margin-left: 0.6666666666667em; /* 8px /12 */
-  margin-top: 0.5em; /* 6px /12 */
-  margin-bottom: 0.5em; /* 6px /12 */
-  color: var(--color-gray-90);
-  border: 1px solid var(--color-gray-50);
-  border-radius: 0.25em; /* 3px /12 */
+.postlist-item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.postlist-item {
+  list-style: none;
+}
+
+.postlist-item > article {
+  display: flex;
+  flex-direction: column;
+}
+
+.postlist-item .postlist-link {
   text-decoration: none;
-  line-height: 1.8;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
-a[href].post-tag,
-a[href].post-tag:visited {
-  color: inherit;
+
+.postlist-item .postlist-date {
+  color: var(--color-gray-50);
 }
-a[href].post-tag:hover,
-a[href].post-tag:focus {
-  background-color: var(--color-gray-20);
+
+.postlist-item .postlist-description {
+  color: var(--color-gray-20);
+  font-size: 1.1rem;
+  font-weight: 300;
 }
-.postlist-item > .post-tag {
-  align-self: center;
+
+.postlist-item .postlist-readmore {
+  width: max-content;
+}
+
+
+@media screen and (min-width: 992px) {
+  .postlist {
+    width: 40vw;
+  }
 }
 
 /* Direct Links / Markdown Headers */
@@ -342,16 +323,6 @@ a[href].direct-link:focus:visited,
   background-image: radial-gradient(circle at top left, #a3cf06 0%, #6a8704 120%);
 } 
 
-h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--color-gray-20);
-  text-align: center;
-  
-  margin-top: 0;
-  margin-bottom: 6rem;
-}
-
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -380,6 +351,17 @@ h2 {
 #gallery,
 #subscribe {
   margin: 15rem auto;
+}
+
+#features h2,
+#gallery h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-gray-20);
+  text-align: center;
+  
+  margin-top: 0;
+  margin-bottom: 6rem;
 }
 
 .gallery-grid {
@@ -654,5 +636,68 @@ footer {
     height: 25px;
 
     margin-right: 0.1rem;
+  }
+}
+
+/* Blog */
+.blog {
+  padding-top: 60px;
+}
+
+.blog > h1 {
+  font-size: 5rem;
+  text-align: center;
+  color: #FFF;
+}
+
+.blog-posts > h2 {
+  font-weight: 300;
+  font-size: 2.2rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  text-align: left;
+  width: 100vw;
+  color: var(--color-gray-50);
+  
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .blog-posts > h2 {
+    width: 40vw;
+  }
+}
+
+/* Post */
+.post {
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  width: 100vw;
+}
+
+.post > h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #FFF;
+  margin-bottom: 1rem;
+}
+
+.post > time {
+  display: block;
+  text-align: center;
+
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+
+  border-bottom: 1px solid var(--color-gray-90);
+}
+
+@media screen and (min-width: 992px) {
+  .post {
+    width: 40vw;
   }
 }
