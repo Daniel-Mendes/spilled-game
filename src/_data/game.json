@@ -1,36 +1,36 @@
 {
-    "title": "Spilled!",
-    "description": "Collect all the oil and upgrade\nyour boat to explore new seas.",
-    "image": "/static/img/spilled-hero.png",
-    "features": [
-        {
-            "title": "A cup of coffee",
-            "description": "A cup of coffee that has been spilled on the floor.",
-            "image": "/static/img/spilled-hero.jpeg"
-        },
-        {
-            "title": "Upgrade your boat",
-            "description": "Upgrade your collector size, tank site and speed.",
-            "image": "/static/img/spilled-feature-upgrade.jpeg"
-        },
-        {
-            "title": "Explore new seas",
-            "description": "Unlock new seas and collect new types of oils.",
-            "image": "/static/img/spilled-feature-new-oils-2.png"
-        }
-    ],
-    "gallery": [
-        {
-            "image": "/static/img/spilled-screenshot-1.png",
-            "caption": "Area when you first start the game."
-        },
-        {
-            "image": "/static/img/spilled-screenshot-2.png",
-            "caption": "Recycle facility where you can sell your oil and upgrade your boat."
-        },
-        {
-            "image": "/static/img/spilled-hero.jpeg",
-            "caption": "Third screenshot caption"
-        }
-    ]
+  "title": "Spilled!",
+  "description": "Collect all the oil and upgrade\nyour boat to explore new seas.",
+  "image": "/static/img/spilled-hero.png",
+  "features": [
+    {
+      "title": "A cup of coffee",
+      "description": "A cup of coffee that has been spilled on the floor.",
+      "image": "/static/img/spilled-screenshot-2.png"
+    },
+    {
+      "title": "Upgrade your boat",
+      "description": "Upgrade your collector size, tank site and speed.",
+      "image": "/static/img/spilled-feature-upgrade.jpeg"
+    },
+    {
+      "title": "Explore new seas",
+      "description": "Unlock new seas and collect new types of oils.",
+      "image": "/static/img/spilled-feature-new-oils-2.png"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "/static/img/spilled-screenshot-1.png",
+      "caption": "Area when you first start the game."
+    },
+    {
+      "image": "/static/img/spilled-screenshot-2.png",
+      "caption": "Recycle facility where you can sell your oil and upgrade your boat."
+    },
+    {
+      "image": "/static/img/spilled-feature-new-oils.png",
+      "caption": "Venture out to clean bigger and stronger oil spills."
+    }
+  ]
 }
