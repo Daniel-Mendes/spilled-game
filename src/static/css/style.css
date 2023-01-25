@@ -5,6 +5,8 @@
 
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+
+  --nav-height: 60px;
 }
 
 /* Theme colors */
@@ -15,8 +17,7 @@
 
   --background-color: #000;
 
-  --text-color: var(--color-gray-50);
-  --text-color-link: var(--color-gray-50);
+  --text-color: var(--color-gray-20);
 
   --filter-white: invert(95%) sepia(0%) saturate(7483%) hue-rotate(86deg) brightness(109%) contrast(104%);
 }
@@ -56,7 +57,11 @@ p {
 }
 
 a[href] {
-  color: var(--text-color-link);
+  color: var(--color-gray-50);
+}
+
+a[href]:hover {
+  color: var(--color-gray-20);
 }
 
 table {
@@ -134,8 +139,9 @@ header.sticky {
   transition: color 0.3s;
 }
 
-.home a:hover {
-  color: #fff;
+.not-found {
+  padding-top: 200px;
+  text-align: center;
 }
 
 /* Nav */
@@ -155,13 +161,9 @@ header.sticky {
 }
 .nav-item a {
   font-size: 1.1rem;
-  color: var(--text-color-link);
   text-decoration: none;
 
   transition: color 0.3s;
-}
-.nav-item a:hover {
-  color: #FFF;
 }
 
 /* Posts list */
@@ -474,11 +476,7 @@ a[href].direct-link:focus:visited,
 }
 
 .subscribe-form > input {
-  transition-delay: 300ms;
-}
-
-.subscribe-form > button {
-  transition-delay: 400ms;
+  transition: all 1s 300ms, outline 0.3s;
 }
 
 .subscribe-form > input,
@@ -492,6 +490,8 @@ a[href].direct-link:focus:visited,
 }
 
 .subscribe-form > button {
+  transition: all 1s 400ms, color 0.3s, background-color 0.3s;
+
   background-color: var(--color-gray-50);
   color: var(--color-gray-90);
   cursor: pointer;
@@ -534,17 +534,11 @@ a[href].direct-link:focus:visited,
 .social > li > a {
   text-decoration: none;
 
-  color: var(--color-gray-50);
-
   transition: color 0.3s;
 }
 
 .social a > span {
   display: none;
-}
-
-.social > li > a:hover {
-  color: #FFF;
 }
 
 .social .icon {
@@ -646,7 +640,7 @@ footer {
 
 /* Blog */
 .blog {
-  padding-top: 60px;
+  padding-top: var(--nav-height);
 }
 
 .blog > h1 {
@@ -676,7 +670,7 @@ footer {
 
 /* Post */
 .post {
-  padding-top: 60px;
+  padding-top: var(--nav-height);
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -712,6 +706,7 @@ footer {
 
 .post > figure > figcaption {
   font-style: italic;
+  color: var(--color-gray-50);
 }
 
 .post img {
