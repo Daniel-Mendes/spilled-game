@@ -1,6 +1,7 @@
 ---
 title: An introduction.
-description: It's been nice sharing my work with you, but I figured an introduction wouldn't hurt!
+description: It's been nice sharing my work with you, but I figured an
+  introduction wouldn't hurt!
 author: Lente
 date: 2023-01-15
 layout: layouts/post.njk
@@ -13,7 +14,7 @@ I'm Lente, that means 'Spring' in Dutch :) I'm 22 years old and live in The Neth
 
 I grew up here, on a ship that my parents bought in 1995. 
 
-![This spot is what we called the 'Zomerplek' or 'Summer spot'. This is because for winter, we would move to the harbor in town centre.](/../static/img/post-an-introduction-boat-1.jpeg)
+![](/../static/img/post-an-introduction-boat-1.jpeg "This spot is what we called the 'Zomerplek' or 'Summer spot'. This is because for winter, we would move to the harbor in town centre.")
 
 It was in the middle of nature. For electricity, we had a generator on land that we would turn on whenever we needed it.
 
@@ -71,7 +72,7 @@ My brother remade the whole rental house in Blender! It was so much fun to work 
 
 We kept working on the game even after the vacation, and eventually released it!
 
-https://www.youtube.com/watch?v=YessuSXLXhs
+http://www.youtube.com/watch?v=YessuSXLXhs
 
 After this, I felt an itch to try working without a premade game-engine.
 I started out with Java & Processing. 
@@ -84,7 +85,7 @@ I also played around with making a 3D Game Engine from scratch.
 For this, I followed ThinMatrix's tutorials on YouTube, which were absolutely awesome.
 Once again it was really satisfying to make all of this from scratch.
 
-https://www.youtube.com/watch?v=ggwk0aYlxiQ
+http://www.youtube.com/watch?v=ggwk0aYlxiQ
 
 Back to 2D, I made a little platformer with C# and MonoGame. 
 
