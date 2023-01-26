@@ -766,4 +766,8 @@ footer {
   .post-content img {
     width:  auto;
   }
+
+  .post-content > p:has(> img) {
+    text-align: center;
+  }
 }
