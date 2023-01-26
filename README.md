@@ -13,6 +13,14 @@ Collect all the oil and upgrade your boat to explore new seas.
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/Daniel-Mendes/spilled-game&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
 
+## Mailjet integration
+
+To use the Mailjet contact list, we will use [Zapier](https://zapier.com/) to send the form data from Netlify to Mailjet.
+
+### Use this Zapier template
+
+https://zapier.com/shared/109a6a45ecf2d79c505c8393ce9440c798415bbc
+
 ## Getting Started
 
 Detailed instructions are available in my blog. [Check it out](https://blog.surjithctly.in/neat-stack-create-a-static-website-with-netlify-cms-eleventy-alpinejs-and-tailwindcss)
