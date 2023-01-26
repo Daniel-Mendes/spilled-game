@@ -134,3 +134,39 @@ The first thing we did was bring her on land on the shipyard, for a new bottom c
 She needs quite a lot of work, but she has a really solid base.
 
 I'm re-doing the entire interior. It was okay the way it was before, but just not the best suited for actually living.
+
+![Lente inside boat before re-doing the entire interior](/static/img/post-an-introduction-lente-inside-old-boat.jpg)
+
+This is me after having stripped the entire place. One not-so-fun suprise was that there was a lot of rainwater on the hull of the boat. But we managed to clean it up, and used oil to prevent any future rust.
+
+Luckily the boat is double plated. Meaning that she basically has a double steel shell! **She is 90+ years old, after all.**
+
+For reference, this is what the inside looked like before I stripped the place.
+
+![](/static/img/post-an-introduction-old-boat-interior.jpg)
+
+Since then, me and my mom have worked on it on the weekends.
+
+![](/static/img/post-an-introduction-old-boat-interior-2.jpg)
+
+This is what she looks like now! The floor is back in place, with proper insulation. It was quite a puzzle, since originally, there wasn't any floor under the seating area that was there.
+
+We made a bed in the front, as this makes for a lot more space.
+And I painted the ceiling and walls white!
+
+There's a lot more work to be done, to list a few things: heating, bathroom, kitchen and furniture.
+
+But we will manage :) my mom is a great help, she's really good with this stuff and I'm learning a lot!
+
+
+The goal is to eventually roam around with the boat and make games from wherever :)
+
+- - -
+
+- - -
+
+That's a short story of my life so far haha! Thank you for reading all the way through!
+
+It hasn't always been smooth sailing, but I'm excited for the future!
+
+-﻿ Lente
