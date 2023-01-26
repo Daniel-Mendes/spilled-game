@@ -312,6 +312,9 @@ a[href].direct-link:focus:visited,
 }
 
 .hero-content > a {
+  display: flex;
+  align-items: center;
+
   color: #fff;
   text-decoration: none;
   padding: 1rem;
@@ -328,7 +331,23 @@ a[href].direct-link:focus:visited,
   color: #fff;
 
   background-image: radial-gradient(circle at top left, #a3cf06 0%, #6a8704 120%);
-} 
+}
+
+.hero-content > a > .icon {
+  display: inline-block;
+
+  width: 25px;
+  height: 25px;
+
+  filter: var(--filter-white);
+  background-repeat: no-repeat;
+
+  margin-right: 0.5rem;
+}
+
+.icon.steam {
+  background-image: url("./svg/steam.svg");
+}
 
 .feature-grid {
   display: grid;
