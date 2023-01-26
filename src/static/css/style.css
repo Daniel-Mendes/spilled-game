@@ -609,21 +609,24 @@ footer {
 /* Post */
 .post {
   padding-top: var(--nav-height);
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
 
   width: 100vw;
 }
 
-.post > h1 {
+.post-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.post-content > h1 {
   font-size: 3rem;
   text-align: center;
   color: #FFF;
   margin-bottom: 1rem;
 }
 
-.post > time {
+.post-content > time {
   display: block;
   text-align: center;
 
@@ -633,21 +636,21 @@ footer {
   border-bottom: 1px solid var(--color-gray-90);
 }
 
-.post > figure {
+.post-content > figure {
   margin-left: 0;
   margin-right: 0;
 }
 
-.post > figure:has(img) {
+.post-content > figure:has(img) {
   text-align: center;
 }
 
-.post > figure > figcaption {
+.post-content > figure > figcaption {
   font-style: italic;
   color: var(--color-gray-50);
 }
 
-.post img {
+.post-content img {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -655,7 +658,7 @@ footer {
   object-fit: cover;
 }
 
-.post .eleventy-plugin-youtube-embed > lite-youtube {
+.post-content .eleventy-plugin-youtube-embed > lite-youtube {
   margin: 0 auto;
 }
 
@@ -736,7 +739,12 @@ footer {
     width: 50vw;
   }
 
-  .post img {
+  .post-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .post-content img {
     width:  auto;
   }
 }

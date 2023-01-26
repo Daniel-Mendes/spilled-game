@@ -3,11 +3,16 @@ layout: layouts/base.njk
 header: sticky
 templateClass: post
 ---
-<h1>{{ title }}</h1>
 
-<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }} by {{ author }}</time>
+<div class="post-content">
+  
+  <h1>{{ title }}</h1>
 
-{{ content | safe }}
+  <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }} by {{ author }}</time>
+
+  {{ content | safe }}
+
+</div>
 
 {%- if collections.posts %}
 {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
