@@ -69,7 +69,8 @@ module.exports = function(eleventyConfig) {
     slugify: eleventyConfig.getFilter("slugify")
   }).use(markdownItImageFigures, {
     figcaption: "title",
-    lazy: true
+    lazy: true,
+    async: true
   });
 
   eleventyConfig.setLibrary("md", markdownLibrary);

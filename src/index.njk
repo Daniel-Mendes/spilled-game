@@ -26,7 +26,7 @@ eleventyNavigation:
     {% for feature in game.features %}
       <div class="feature-item hidden" style="--order: {{ loop.index }}">
         <div class="feature-image">
-          <img src="{{ feature.image }}" alt="{{ feature.title }}" lazy="loading">
+          <img src="{{ feature.image }}" alt="{{ feature.title }}" lazy="loading" decoding="async">
         </div>
         <div class="feature-content">
           <h3>{{ feature.title }}</h3>
@@ -44,7 +44,7 @@ eleventyNavigation:
     {% for image in game.gallery %}
       <div class="gallery-item hidden" style="--order: {{ loop.index }}">
         <figure>
-          <img src="{{ image.image }}" alt="{{ image.caption }}" lazy="loading">
+          <img src="{{ image.image }}" alt="{{ image.caption }}" lazy="loading" decoding="async">
           <figcaption>{{ image.caption }}</figcaption>
         </figure>
       </div>
