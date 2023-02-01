@@ -1,6 +1,9 @@
 import { spline } from "@georgedoescode/spline";
 import { createNoise2D } from "simplex-noise";
 
+/*
+  Sticky header
+*/
 let header = document.querySelector("header");
 let sticky = header.offsetTop;
 
@@ -15,6 +18,9 @@ if (window.location.pathname === "/") {
   }
 }
 
+/*
+  Fade in on scroll animation
+*/
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -29,6 +35,9 @@ hiddenElements.forEach(element => {
   observer.observe(element);
 });
 
+/*
+  Blob animation
+*/
 const map = (value, start1, stop1, start2, stop2) => {
   return ((value - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
 }
@@ -69,6 +78,7 @@ const createPoints = () => {
 
 const heroBlob = document.querySelector(".hero-blob path");
 const subscribeBlob = document.querySelector(".subscribe-blob path");
+
 const noiseStep = 0.002;
 const noise2D = createNoise2D();
 const points = createPoints();
@@ -96,8 +106,12 @@ const points = createPoints();
   }
 
   // update the path
-  heroBlob.setAttribute("d", spline(points, 1, true));
-  subscribeBlob.setAttribute("d", spline(points, 1, true));
+  if (heroBlob) {
+    heroBlob.setAttribute("d", spline(points, 1, true));
+  }
+  if (subscribeBlob) {
+    subscribeBlob.setAttribute("d", spline(points, 1, true));
+  }
 
   // call this function again on the next frame
   requestAnimationFrame(animate);
