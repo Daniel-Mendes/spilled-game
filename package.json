@@ -2,14 +2,17 @@
   "name": "spilled-game",
   "version": "1.0.0",
   "description": "Website to present the game Spilled!",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "watch": "npx @11ty/eleventy --watch",
-    "serve": "npx @11ty/eleventy --serve",
-    "start": "npx @11ty/eleventy --serve",
-    "start:netlify-cms": "npx netlify-cms-proxy-server",
-    "debug": "DEBUG=* npx @11ty/eleventy"
+    "build": "run-s build:*",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build:parcel": "npx parcel build src/**/*.js src/**/*.css --dist-dir _site/static/",
+    "watch": "run-s watch:*",
+    "watch:eleventy": "npx @11ty/eleventy --watch",
+    "watch:parcel": "npx parcel watch src/**/*.js src/**/*.css --dist-dir _site/static/",
+    "start": "npm-run-all --parallel start:* watch:parcel",
+    "start:eleventy": "npx @11ty/eleventy --serve",
+    "start:netlify-cms": "npx netlify-cms-proxy-server"
   },
   "repository": {
     "type": "git",
@@ -30,6 +33,12 @@
     "luxon": "^3.2.1",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.6",
-    "markdown-it-image-figures": "^2.1.1"
+    "markdown-it-image-figures": "^2.1.1",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "@georgedoescode/spline": "^1.0.1",
+    "simplex-noise": "^4.0.1"
   }
 }

@@ -99,57 +99,6 @@ code {
   word-break: break-all;
 }
 
-/* Floating top to bottom and left to right */
-@keyframes floating-hero-blob {
-  0% {
-    transform: translate(-50%, -50%) rotateX(180deg) scale(1.6);
-  }
-  50% {
-    transform: translate(-45%, -55%) rotateX(180deg) scale(1.6);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotateX(180deg) scale(1.6);
-  }
-}
-
-@keyframes floating-subscribe-blob {
-  0% {
-    transform: translate(-50%, -60%) scale(1.5);
-  }
-  50% {
-    transform: translate(-45%, -65%) scale(1.5);
-  }
-  100% {
-    transform: translate(-50%, -60%) scale(1.5);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  @keyframes floating-hero-blob {
-    0% {
-      transform: translate(-50%, -50%) rotateX(180deg) scale(0.4);
-    }
-    50% {
-      transform: translate(-49%, -51%) rotateX(180deg) scale(0.4);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotateX(180deg) scale(0.4);
-    }
-  }
-
-  @keyframes floating-subscribe-blob {
-    0% {
-      transform: translate(-50%, -50%) rotateX(180deg) scale(0.4);
-    }
-    50% {
-      transform: translate(-49%, -51%) rotateX(180deg) scale(0.4);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotateX(180deg) scale(0.4);
-    }
-  }
-}
-
 /* Header */
 header {
   position: absolute;
@@ -317,13 +266,16 @@ a[href].direct-link:focus:visited,
 }
 
 .hero-blob {
-  width: 100%;
-  height: auto;
+  --blob-color: #000;
+
+  width: 90vmin;
+  height: 90vmin;
+
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotateX(180deg) scale(1.6);
-  animation: floating-hero-blob 6s ease-in-out infinite;
+
+  transform: translate(-50%, -50%);
 }
 
 .hero-content {
@@ -524,15 +476,16 @@ a[href].direct-link:focus:visited,
 }
 
 .subscribe-blob {
-  width: 100vw;
-  height: auto;
+  --blob-color: #fff;
+
+  width: 90vmin;
+  height: 90vmin;
 
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
 
-  transform: translate(-50%, -60%) scale(1.5);
-  animation: floating-subscribe-blob 6s ease-in-out infinite;
+  transform: translate(-50%, -50%);
 }
 
 #subscribe > h3 {
@@ -743,13 +696,6 @@ footer {
     font-size: 8rem;
   }
 
-  .hero-blob {
-    top: 50%;
-    left: 53%;
-  
-    transform: translate(-50%, -50%) rotateX(180deg) scale(0.4);
-  }
-
   .hero-image > img {
     object-position: left top;
   }
@@ -774,13 +720,6 @@ footer {
 
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .subscribe-blob {
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%) scale(0.5);
   }
 
   .subscribe-form > input,

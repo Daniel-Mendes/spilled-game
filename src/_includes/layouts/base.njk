@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ '/static/css/style.css' | url }}">
     <link rel="stylesheet" href="{{ '/static/css/prism-tomorrow.css' | url }}">
 
-    <script src="{{ '/static/js/app.js' | url }}" defer></script>
+    <script src="{{ '/static/js/app.js' | url }}" type="module" defer></script>
 
     <link rel="alternate" href="{{ settings.feed.path | url }}" type="application/atom+xml" title="{{ settings.title }}">
     <link rel="alternate" href="{{ settings.jsonfeed.path | url }}" type="application/json" title="{{ settings.title }}">
@@ -45,7 +45,9 @@
 
       <div id="subscribe">
         <div class="subscribe-blob">
-          <img src="{{ '/static/css/svg/subscribe-blob.svg' | url }}" alt="Subscribe Blob">
+          <svg viewBox="0 0 200 200">
+            <path d="" fill="var(--blob-color)"></path>
+          </svg>
         </div>
         <h3 class="hidden">Subscribe</h3>
         <p class="hidden">Subscribe to the newsletter to get updates about the game progress.</p>

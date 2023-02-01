@@ -10,7 +10,8 @@ const pluginEmbedYouTube = require("eleventy-plugin-youtube-embed");
 
 module.exports = function(eleventyConfig) {
   // Copy the `static` folders to the output
-  eleventyConfig.addPassthroughCopy("./src/static");
+  eleventyConfig.addPassthroughCopy("./src/static/font");
+  eleventyConfig.addPassthroughCopy("./src/static/img");
 
   // Copy Netlify CMS `config.yml` fil to the output
   eleventyConfig.addPassthroughCopy("./src/admin/config.yml");
