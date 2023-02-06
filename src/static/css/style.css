@@ -210,6 +210,7 @@ header.sticky {
   color: var(--color-gray-20);
   font-size: 1.1rem;
   font-weight: 300;
+  margin: 1em 0;
 }
 
 .postlist-item .postlist-readmore {
@@ -367,10 +368,18 @@ a[href].direct-link:focus:visited,
   object-fit: contain;
 }
 
+.feature-content {
+  margin-top: 1rem;
+}
+
 .feature-content > h3 {
   font-size: 1.4rem;
   font-weight: bold;
   color: var(--color-gray-20);
+}
+
+.feature-content > p {
+  color: var(--color-gray-50)
 }
 
 .feature-item {
@@ -443,11 +452,11 @@ a[href].direct-link:focus:visited,
   color: var(--color-gray-20);
 
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   opacity: 0;
   visibility: hidden;
 
-  padding: 0 1rem;
+  padding: 0 15px;
 
   transition: opacity 0.3s, visibility 0.3s;
 }
@@ -616,6 +625,7 @@ footer {
   font-size: 5rem;
   text-align: center;
   color: #FFF;
+  margin: 1em 0;
 }
 
 .blog-posts > h2 {
