@@ -1,17 +1,41 @@
+const path = require("path");
+
 const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-var markdownItImageFigures = require('markdown-it-image-figures');
+var markdownItEleventyImg = require('markdown-it-eleventy-img');
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginEmbedYouTube = require("eleventy-plugin-youtube-embed");
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt, sizes) {
+  let metadata = await Image(src, {
+    widths: [320, 640, 1280, 1920],
+    formats: ["webp", "jpeg"],
+    outputDir: "_site/static/img",
+    urlPath: '/static/img',
+    filenameFormat: function (hash, src, width, format, options) {
+      const { name } = path.parse(src);
+      return `${name}-${width}.${format}`;
+    }
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  return Image.generateHTML(metadata, imageAttributes);
+}
 
 module.exports = function(eleventyConfig) {
   // Copy the `static` folders to the output
   eleventyConfig.addPassthroughCopy("./src/static/font");
-  eleventyConfig.addPassthroughCopy("./src/static/img");
 
   // Copy Netlify CMS `config.yml` fil to the output
   eleventyConfig.addPassthroughCopy("./src/admin/config.yml");
@@ -28,6 +52,9 @@ module.exports = function(eleventyConfig) {
     modestBranding: true,
     recommendSelfOnly: true,
   });
+
+  // Add a shortcode image
+  eleventyConfig.addAsyncShortcode("image", imageShortcode);
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
@@ -68,10 +95,31 @@ module.exports = function(eleventyConfig) {
     }),
     level: [1,2,3,4],
     slugify: eleventyConfig.getFilter("slugify")
-  }).use(markdownItImageFigures, {
-    figcaption: "title",
-    lazy: true,
-    async: true
+  }).use(markdownItEleventyImg, {
+    imgOptions: {
+      widths: [320, 640, 1280, 1920],
+      formats: ["webp", "jpeg"],
+      outputDir: "_site/static/img",
+      urlPath: '/static/img',
+      filenameFormat: function (hash, src, width, format, options) {
+        const { name } = path.parse(src);
+        return `${name}-${width}.${format}`;
+      }
+    }, globalAttributes: {
+      loading: "lazy",
+      decoding: "async",
+      sizes: "100vw"
+    }, renderImage(image, attributes) {
+      const [ Image, options] = image;
+      const [ src, attrs ] = attributes;
+
+      Image(src, options);
+
+      const metadata = Image.statsSync(src, options);
+      const imageMarkup = Image.generateHTML(metadata, attrs, { whitespaceMode: "inline" });
+
+      return `<figure>${imageMarkup}${attrs.title ? `<figcaption>${attrs.title}</figcaption>` : ""}</figure>`;
+    }
   });
 
   eleventyConfig.setLibrary("md", markdownLibrary);

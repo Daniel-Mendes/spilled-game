@@ -7,7 +7,7 @@ eleventyNavigation:
 
 <div id="hero">
   <div class="hero-image">
-    <img src="{{ game.image }}" alt="{{ game.title }}">
+    {% image game.image, game.title, "(min-width: 992px) 100vw, 1280px" %}
   </div>
   <div class="hero-blob">
     <svg viewBox="0 0 200 200">
@@ -31,7 +31,7 @@ eleventyNavigation:
     {% for feature in game.features %}
       <div class="feature-item hidden" style="--order: {{ loop.index }}">
         <div class="feature-image">
-          <img src="{{ feature.image }}" alt="{{ feature.title }}" lazy="loading" decoding="async">
+          {% image feature.image, feature.title, "(min-width: 992px) 640px, 320px" %}
         </div>
         <div class="feature-content">
           <h3>{{ feature.title }}</h3>
@@ -49,7 +49,7 @@ eleventyNavigation:
     {% for image in game.gallery %}
       <div class="gallery-item hidden" style="--order: {{ loop.index }}">
         <figure>
-          <img src="{{ image.image }}" alt="{{ image.caption }}" lazy="loading" decoding="async">
+          {% image image.image, image.caption, "100vw, (min-width: 992px) 640px" %}
           <figcaption>{{ image.caption }}</figcaption>
         </figure>
       </div>

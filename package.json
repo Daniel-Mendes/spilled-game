@@ -4,15 +4,14 @@
   "description": "Website to present the game Spilled!",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "build": "run-s build:*",
-    "build:eleventy": "npx @11ty/eleventy",
-    "build:parcel": "npx parcel build src/**/*.js src/**/*.css --dist-dir _site/static/",
-    "watch": "run-s watch:*",
-    "watch:eleventy": "npx @11ty/eleventy --watch",
-    "watch:parcel": "npx parcel watch src/**/*.js src/**/*.css --dist-dir _site/static/",
-    "start": "npm-run-all --parallel start:* watch:parcel",
-    "start:eleventy": "npx @11ty/eleventy --serve",
-    "start:netlify-cms": "npx netlify-cms-proxy-server"
+    "dev": "npm-run-all --parallel bundle:* proxy:netlify-cms",
+    "bundle:eleventy": "npx @11ty/eleventy --serve --quiet",
+    "bundle:parcel": "npx parcel watch src/**/*.js src/**/*.css --dist-dir _site/static/",
+    "proxy:netlify-cms": "npx netlify-cms-proxy-server",
+    "build": "run-s clean prod:*",
+    "prod:eleventy": "npx @11ty/eleventy",
+    "prod:parcel": "npx parcel build src/**/*.js src/**/*.css --dist-dir _site/static/",
+    "clean": "rm -rf _site"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,7 @@
   "homepage": "https://github.com/Daniel-Mendes/spilled-game#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-img": "^3.0.0",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
@@ -33,7 +33,7 @@
     "luxon": "^3.2.1",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.6",
-    "markdown-it-image-figures": "^2.1.1",
+    "markdown-it-eleventy-img": "^0.9.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.8.3"
   },
