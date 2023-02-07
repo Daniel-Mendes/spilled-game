@@ -47,7 +47,7 @@ Simple stuff, but quite a cool result!
 If you watch my YouTube videos or follow me on Twitter, you might have heard the somewhat controversial 'Slurp sound'.
 
 Here's a link to the initial Tweet I made about it.
-https://twitter.com/LenteGameDev/status/1616114894855716881
+<https://twitter.com/LenteGameDev/status/1616114894855716881>
 
 It was just the same sound repeated over and over, pitched up and down.
 I wanted to try changing that! I figured I could have a start sound play when you first enter an oil spill, then during collecting a looping sound, and then when you’re done with the spill, an end sound. 
@@ -82,3 +82,17 @@ Anyone is welcome, and details to join can be found on the Discord.
 The server is only open on the weekends, to encourage people to play together :)
 
 It's so awesome to see the community we have built! If you haven't joined the Discord yet, you definitely should!
+
+## Boat work, before and after
+
+The above is some of what I did, cleaning the roof! I did do quite some interior work, but it's more so small bits all over the place.
+
+The bottom one is what my mom has been up to! this is the little room where the toilet goes (and maybe a shower some day?). 
+It looks a LOT nicer now and I'm so happy with it :) Next step is installing the actual toilet.
+
+
+That's it for this week's newsletter! If you made it all the way through, or just skipped through it, thank you for reading! I hope to make a new one every week from now on!
+
+See ya!
+
+\- Lente

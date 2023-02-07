@@ -4,7 +4,6 @@ description: It's been nice sharing my work with you, but I figured an
   introduction wouldn't hurt!
 author: Lente
 date: 2023-01-15
-layout: layouts/post.njk
 ---
 Hey friend!
 
