@@ -10,7 +10,7 @@ It's been a minute since the last newsletter. A lot has happened for my game Spi
 
 From now on I will be writing you an email every week, with game updates, and life updates! (boat stuff!)
 
-If you want to catch up on what I have added to the game in the few weeks that I haven't written you an email, you can check out my YouTube channel, as I have been posting there every 2 weeks (and will continue to do so).
+If you want to catch up on what I have added to the game in the few weeks that I haven't written you an email, you can check out my [YouTube channel](https://www.youtube.com/@LenteGameDev), as I have been posting there every 2 weeks (and will continue to do so).
 
 The YouTube videos and the weekly email newsletter will have some overlap, but the newsletter will be more personal, and more frequent!
 
@@ -32,7 +32,7 @@ I've spent way too many hours trying to get that to work properly, I could not g
 
 So the start of this week I decided screw it and change the movement all together. To make it easy on myself, I just changed it to moving the boat with the WASD keys.
 It turned out that I liked this way of movement way better than the mouse movement!
-And so did others, people on my Discord server have told me they also liked this movement a lot better. So it's a Win-Win! No more pesky collision stuff for me AND better movement!
+And so did others, people on my [Discord server](https://discord.com/invite/qya9Eb9Z9t) have told me they also liked this movement a lot better. So it's a Win-Win! No more pesky collision stuff for me AND better movement!
 
 ## Stopping the player from getting lost!
 
@@ -47,7 +47,7 @@ Simple stuff, but quite a cool result!
 If you watch my YouTube videos or follow me on Twitter, you might have heard the somewhat controversial 'Slurp sound'.
 
 Here's a link to the initial Tweet I made about it.
-<https://twitter.com/LenteGameDev/status/1616114894855716881>
+[https://twitter.com/LenteGameDev/status/1616114894855716881](https://twitter.com/LenteGameDev/status/1616114894855716881)
 
 It was just the same sound repeated over and over, pitched up and down.
 I wanted to try changing that! I figured I could have a start sound play when you first enter an oil spill, then during collecting a looping sound, and then when you’re done with the spill, an end sound. 
@@ -55,7 +55,7 @@ This way it could work for oil spills big and small alike :)
 
 Here you can listen to the new version I made!
 
-<https://twitter.com/LenteGameDev/status/1621480676879998977>
+[https://twitter.com/LenteGameDev/status/1621480676879998977](https://twitter.com/LenteGameDev/status/1621480676879998977)
 
 This link goes to a thread about how I made the sound. Well, I didn't exactly make it myself, but I did combine and edit two existing sounds! In the thread you can listen to all the sounds involved :)
 
@@ -78,7 +78,7 @@ It's not super pretty yet, but that can be worked on :)
 
 Cyklon_3000, a Moderator in my Discord server, took the initiative to set up a Minecraft survival server! 
 
-Anyone is welcome, and details to join can be found on the Discord. 
+Anyone is welcome, and details to join can be found on [the Discord](https://discord.com/invite/qya9Eb9Z9t). 
 The server is only open on the weekends, to encourage people to play together :)
 
 It's so awesome to see the community we have built! If you haven't joined the Discord yet, you definitely should!
