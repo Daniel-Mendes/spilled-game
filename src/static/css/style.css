@@ -700,6 +700,18 @@ footer {
   margin: 0 auto;
 }
 
+.post-content a {
+  word-wrap: break-word;
+}
+
+.post-content table {
+  margin: 1em auto;
+}
+
+.post-content table td {
+  padding-top: 1em;
+}
+
 @media screen and (min-width: 992px) {
   .nav-item {
     margin-right: 2rem;

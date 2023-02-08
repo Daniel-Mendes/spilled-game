@@ -38,6 +38,8 @@ And so did others, people on my [Discord server](https://discord.com/invite/qya9
 
 I made this little arrow around the player that guides them towards a nearby recycling facility once their oil tank is full. It's not very pretty yet, but it does it's job!
 
+![](src/static/img/post-where-have-i-been-stopping-player-from-getting-lost.gif)
+
 To implement this, I first figure out what the most nearby recycling facility is. (Since there is two of them in the demo area) 
 I then calculate the angle between the boat and this recycling facility! Then I apply this angle to a UI element :)
 Simple stuff, but quite a cool result!
@@ -47,6 +49,7 @@ Simple stuff, but quite a cool result!
 If you watch my YouTube videos or follow me on Twitter, you might have heard the somewhat controversial 'Slurp sound'.
 
 Here's a link to the initial Tweet I made about it.
+
 [https://twitter.com/LenteGameDev/status/1616114894855716881](https://twitter.com/LenteGameDev/status/1616114894855716881)
 
 It was just the same sound repeated over and over, pitched up and down.
@@ -63,6 +66,8 @@ This link goes to a thread about how I made the sound. Well, I didn't exactly ma
 
 So, for the longest time now I've wanted to change the interface I have for upgrading your boat in the game. It definitely served it's purpose, but it doesn't look all that great.
 
+![](src/static/img/post-where-have-i-been-upgrade-interface.png)
+
 Now, I've made quite a few changes! I made it so when you collide with the recycling facility, the camera zooms in on the boat. 
 
 I also rotate the boat so that it's positioned the same every time. 
@@ -72,6 +77,9 @@ For now the components juts get bigger whenever you upgrade them, but I might ch
 For the speed upgrade, I added a solar panel on the roof of the boat. For now when you upgrade your speed, this solar panel increases in size. In the future I might make it so you add more solar panels to your boat when you upgrade your speed.
 
 I moved the upgrade buttons to be next to their corresponding components.
+
+![](src/static/img/post-where-have-i-been-moved-upgrade-buttons.gif)
+
 It's not super pretty yet, but that can be worked on :)
 
 ## Discord Minecraft Server!
@@ -83,13 +91,18 @@ The server is only open on the weekends, to encourage people to play together :)
 
 It's so awesome to see the community we have built! If you haven't joined the Discord yet, you definitely should!
 
+![](src/static/img/post-where-have-i-been-moved-discord-minecraft-server.png)
+
 ## Boat work, before and after
+
+| ![](src/static/img/post-where-have-i-been-work-boat-outside-before.jpg) | ![](src/static/img/post-where-have-i-been-work-boat-outside-after.jpg) |
+|---|---|
+| ![](src/static/img/post-where-have-i-been-work-boat-inside-before.jpg) | ![](src/static/img/post-where-have-i-been-work-boat-inside-after.jpg) |
 
 The above is some of what I did, cleaning the roof! I did do quite some interior work, but it's more so small bits all over the place.
 
 The bottom one is what my mom has been up to! this is the little room where the toilet goes (and maybe a shower some day?). 
 It looks a LOT nicer now and I'm so happy with it :) Next step is installing the actual toilet.
-
 
 That's it for this week's newsletter! If you made it all the way through, or just skipped through it, thank you for reading! I hope to make a new one every week from now on!
 

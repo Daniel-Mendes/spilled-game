@@ -15,6 +15,9 @@ async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(src, {
     widths: [320, 640, 1280, 1920],
     formats: ["webp", "jpeg"],
+    sharpOptions: {
+      animated: true,
+    },
     outputDir: "_site/static/img",
     urlPath: '/static/img',
     filenameFormat: function (hash, src, width, format, options) {
@@ -99,6 +102,9 @@ module.exports = function(eleventyConfig) {
     imgOptions: {
       widths: [320, 640, 1280, 1920],
       formats: ["webp", "jpeg"],
+      sharpOptions: {
+        animated: true,
+      },
       outputDir: "_site/static/img",
       urlPath: '/static/img',
       filenameFormat: function (hash, src, width, format, options) {
