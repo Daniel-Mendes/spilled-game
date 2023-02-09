@@ -712,6 +712,11 @@ footer {
   padding-top: 1em;
 }
 
+.post-content table thead tr th:last-child,
+.post-content table tbody tr td:last-child {
+  padding-right: 0;
+}
+
 @media screen and (min-width: 992px) {
   .nav-item {
     margin-right: 2rem;
