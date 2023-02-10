@@ -23,8 +23,6 @@ https://zapier.com/shared/109a6a45ecf2d79c505c8393ce9440c798415bbc
 
 ## Getting Started
 
-Detailed instructions are available in my blog. [Check it out](https://blog.surjithctly.in/neat-stack-create-a-static-website-with-netlify-cms-eleventy-alpinejs-and-tailwindcss)
-
 ### 1\. Clone this Repository
 
 ```
@@ -46,13 +44,7 @@ npm install
 ### 4\. Run Eleventy
 
 ```
-npm run start
-```
-
-### 5\. (Optional) Run Netlify CMS locally
-
-```
-npm run start:netlify-cms
+npm run dev
 ```
 
 ## Author
