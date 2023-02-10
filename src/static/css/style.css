@@ -353,6 +353,23 @@ a[href].direct-link:focus:visited,
   background-image: url("./svg/steam.svg");
 }
 
+#features,
+#gallery,
+#subscribe {
+  margin: 15rem auto;
+}
+
+#features h2,
+#gallery h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-gray-20);
+  text-align: center;
+  
+  margin-top: 0;
+  margin-bottom: 6rem;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -376,6 +393,8 @@ a[href].direct-link:focus:visited,
   font-size: 1.4rem;
   font-weight: bold;
   color: var(--color-gray-20);
+  
+  margin-bottom: 0.25rem;
 }
 
 .feature-content > p {
@@ -386,27 +405,10 @@ a[href].direct-link:focus:visited,
   transition-delay: calc(100ms * var(--order));
 }
 
-#features,
-#gallery,
-#subscribe {
-  margin: 15rem auto;
-}
-
-#features h2,
-#gallery h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--color-gray-20);
-  text-align: center;
-  
-  margin-top: 0;
-  margin-bottom: 6rem;
-}
-
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 0.25rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
 
   margin: 0 1rem;
 }
@@ -746,6 +748,12 @@ footer {
   .feature-item.visible,
   .gallery-item.visible {
     transform: translateY(0);
+  }
+
+  .gallery-grid {
+    margin: auto 5rem;
+
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #subscribe {
