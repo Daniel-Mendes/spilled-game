@@ -6,10 +6,10 @@ eleventyNavigation:
 ---
 
 <section class="blog-posts">
-    {% set maxPosts = collections.posts.length | min(3) %}
-    <h2 class="hidden">Latest {% if maxPosts == 1 %}post{% else %}{{ maxPosts }} posts{% endif %}</h2>
+    {% set countPosts = collections.posts.length %}
+    <h2 class="hidden">Latest {% if countPosts == 1 %}post{% else %}{{ countPosts }} posts{% endif %}</h2>
 
-    {% set postslist = collections.posts | head(-3) %}
+    {% set postslist = collections.posts %}
     {% set postslistCounter = collections.posts | length %}
     {% include "postslist.njk" %}
 </section>

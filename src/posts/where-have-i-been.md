@@ -4,7 +4,7 @@ description: It's been a minute since the last post. A lot has happened for my
   game Spilled! Too much to tell you in this post. I will however tell you about
   some cool things I've done this last week!
 author: Lente
-date: 2023-02-07T09:34:39.444Z
+date: 2023-02-07
 ---
 It's been a minute since the last newsletter. A lot has happened for my game Spilled! Too much to tell you in this email. I will however tell you about some cool things I've done this last week!
 
